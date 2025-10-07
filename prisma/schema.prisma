@@ -1,7 +1,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output = "../generated/prisma"
+
 }
 
 datasource db {
@@ -11,14 +11,14 @@ datasource db {
 
 model Category {
   id  Int @id @default(autoincrement())
-  name  String
+  name  String @unique
   slug  String
   product Product[]
 }
 
 model Product{
   id  Int @id @default(autoincrement())
-  name  String
+  name  String @unique
   price Float
   image String
   categoryId  Int
