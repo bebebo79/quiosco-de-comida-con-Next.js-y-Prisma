@@ -2,6 +2,9 @@ import { prisma } from "@/src/lib/prisma"
 import ImageUpload from "./ImageUpload"
 import { Product } from "@prisma/client"
 
+
+export const dynamic = "force-dynamic"
+
 async function getCategoty() {
 
     return await prisma.category.findMany()

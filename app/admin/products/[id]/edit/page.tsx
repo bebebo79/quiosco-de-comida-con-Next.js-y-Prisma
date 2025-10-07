@@ -6,6 +6,7 @@ import Heading from "@/components/ui/Heading";
 import { prisma } from "@/src/lib/prisma"
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic"
 
 async function getProductById( id : number){
     const product = await prisma.product.findUnique({
